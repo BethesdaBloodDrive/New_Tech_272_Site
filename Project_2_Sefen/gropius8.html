@@ -6,63 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="Walter Gropius was an architect who founded the Bauhaus, a revolitionary design school in germany from 1919&ndash;1932."/>
 	<link rel="stylesheet" href="css/normalize.css">
-    <style>
-		/* box-sizing */
-		html{
-			box-sizing:border-box;
-		}
-		*, *:before, *:after {
-			box-sizing:inherit;
-		}
-		
-		/*STRUCTURE*/
-		
-		body {background-color: #555}
-		#wrap {background-color:#ddd; width:800px; margin:0 auto 0 auto}
-		header {background-color:#444; color:white}
-		footer {background-color:#444; color:white}
-		header, section, footer {padding:20px 60px;}
-		figure {margin:0;}
-		
-		/* TYPOGRAPHY */
-		body {font-family: arial, helvetica, sans-serif;}
-		h1 {font-size:36px;}
-		figcaption {font-style:italic; font-size:14px;}
-		ul {padding-left:16px;}
-		li {margin-bottom:8px;}
-
-		
-		/* NAV TYPE */
-		nav ul {padding-left:0;}
-		ul {padding-left:0;}
-		nav li {list-style:none; display:inline-block; margin-right:6px;}
-		
-		/* LINKS */
-		a:link {color:#aaa; text-decoration:none;}
-		a:visited {color:#aaa}
-		a:hover {color:aqua;}
-		a:focus {color:aqua;}
-		a:active {color:aqua;}
-		
-		section a:link {color:#666; text-decoration:none;}
-		section a:visited {color: #666}
-		section a:hover {color:red;}
-		section a:focus {color:red;}
-		section a:active {color:red;}
-		
-		nav a:link {color:white; background-color:red; padding:6px;}
-		nav a:visited {color:#aaa}
-		nav a:hover, nav a:focus, nav a:active {color:white; background-color:#777}
-		
-		
-		
 	
-		</style>   
+<style>
+    /* box-sizing */
+    html {
+        box-sizing: border-box;
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
     
+    /*STRUCTURE*/
+    body {background-color: #555;}
+    #wrap {background-color: #ddd; width: 100%; max-width: 800px; margin: 0 auto;}
+    header {background-color: #444; color: white;}
+    footer {background-color: #444; color: white;}
+    header, section, footer {padding: 20px 60px;}
+    figure {margin: 0;}
+    
+    /*FLOATS*/
+    .fr300 {
+        width: 100%; 
+        max-width: 300px; 
+        float: right; 
+        margin-left: 20px; 
+        margin-bottom: 20px;
+    }
+    .fr200 {
+        width: 100%; 
+        max-width: 200px; 
+        float: right; 
+        margin-left: 20px; 
+        margin-bottom: 20px;
+    }
+    .fl200 {
+        width: 100%; 
+        max-width: 200px; 
+        float: left; 
+        margin-right: 20px; 
+        margin-bottom: 20px;
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    /* IMAGES */
+    img {width: 100%; margin-bottom:6px;}
+    
+    /* TYPOGRAPHY */
+    body {font-family: arial, helvetica, sans-serif;}
+    h1 {font-size: 36px;}
+    figcaption {font-style: italic; font-size: 14px;}
+    ul {padding-left: 16px;}
+    li {margin-bottom: 8px;}
+	header p {line-height:1.4}
+	figcaption {line-height:1.4}
+    
+    /* NAV TYPE */
+    nav ul {padding-left: 0;}
+    nav li {list-style: none; display: inline-block; margin-right: 6px;}
+    
+    /* LINKS */
+    a:link, a:visited {color: #aaa; text-decoration: none;}
+    a:hover, a:focus, a:active {color: aqua;}
+    
+    section a:link, section a:visited {color: #666; text-decoration: none;}
+    section a:hover, section a:focus, section a:active {color: red;}
+    
+    nav a:link, nav a:visited {color: white; background-color: red; padding: 6px;}
+    nav a:hover, nav a:focus, nav a:active {color: white; background-color: #777;}
+</style>
+	
 </head>
 <body id="top">
 <div id="wrap">
-    <header>
+    <header class="clearfix">
         <nav role="navigation" aria-label="main menu">
             <ul>
                 <li><a href ="#biography">Biography</a></li>
@@ -70,9 +91,9 @@
 
             </ul>
         </nav>
-        <figure>
+        <figure class="fl200">
 
-            <img src="images/WalterGropius-1919x200.jpg">
+            <img src="images/WalterGropius-1919x200.jpg" alt="Image of Walter Gropius">
 
             <figcaption>German architect Walter Gropius, founder of the Bauhaus school of architecture. Photo by Louis Held c. <time datetime="1919">1919</time>, probably in Weimar, Germany, just after the foundation of Bauhaus.</figcaption>
         </figure>
@@ -130,8 +151,8 @@
 
         <h4>Bauhaus</h4>
 
-        <figure>
-            <img src="images/Bauhausx300.jpg"> 
+        <figure class="fr300">
+            <img src="images/Bauhausx300.jpg" alt="Image of the Bauhaus Building"> 
             <figcaption><time datetime="1925">1925</time>&ndash;<time datetime="1926">1926</time>, Dessau, Germany, photo by Detlef Mewes</figcaption>
         </figure>
         <p> In his design, Walter Gropius refined architectonic ideas he first put into practice before WW I in the construction of the Fagus-Werke in Alfeld an der Leine. In Dessau as in Alfeld, the glass curtain wall suspended in front of the load-bearing framework defines the exterior of the workshop wing and openly shows the constructive elements. Gropius, rather than visually amplifying the corners of the cubic body of the building, allowed the glass surface to overlap the edges, thereby creating the impression of lightness.
@@ -144,8 +165,8 @@
         target="_blank">https://en.wikipedia.org/wiki/Bauhaus_Dessau</a>, <time datetime="2016-02-01">2/1/2016)</time></small>
 
         <h4> Walter Gropius House</h4>
-        <figure>
-            <img src="images/Walter_Gropius_photo_Gropius_house_Lincoln_MAx300.jpg">
+        <figure class="fr300">
+            <img src="images/Walter_Gropius_photo_Gropius_house_Lincoln_MAx300.jpg" alt="Image of Walter Gropius House">
             <figcaption> <time datetime="1938"> 1938</time>, Baker Bridge Road, Lincoln, Middlesex County, MA. Photo by Jack E. Boucher &mdash; Library of Congress, Prints and Photograph Division, Historic American Buildings Survey: HABS MASS,9-LIN,16-20 alter Gropius photo
             </figcaption>
         </figure>
@@ -159,10 +180,10 @@
         <blockquote> &ldquo;As to my practice, when I built my first house in the U.S.A. &mdash; which was my own &mdash; I made it a point to absorb into my own conception those features of the New England architectural tradition that I found still alive and adequate. This fusion of the regional spirit with a contemporary approach to design produced a house that I would never have built in Europe with its entirely different climatic, technical and psychological background.&rdquo; &mdash;<cite>Walter Gropius, Scope of Total Architecture, <time datetime="1956"> 1956</time></cite>
         </blockquote>
         <h4> MetLife Building </h4>
-        <figure>
-            <img src="images/MetLifeBldgNY.jpg" style="width:200px; ">
+        <figure class="fl200">
+            <img src="images/MetLifeBldgNY.jpg" alt="Image of MetLife Building in 2003">
             <figcaption> <time datetime="1960">1960</time>&ndash;<time datetime="1963">1963</time>, New York, NY.  Photo by <a href="https://en.wikipedia.org/wiki/User:Postdlf"
-            target="_blank">https://en.wikipedia.org/wiki/User:Postdlf</a> <time datetime="2005-10-03">2005-10-03</time>.
+            target="_blank">en.wikipedia.org/wiki/ User:Postdlf</a> <time datetime="2005-10-03">2005-10-03</time>.
             </figcaption>
         </figure>
             <p>The MetLife Building is a 59-story skyscraper at 200 Park Avenue at East 45th Street above Grand Central Terminal in Midtown Manhattan, New York City. Built in <time datetime="1960">1960</time>-<time datetime="1963">1963</time> as the Pan Am Building, the then-headquarters of Pan American World Airways, it was designed by Emery Roth &amp; Sons, Pietro Belluschi and Walter Gropius in the International style. The world&rsquo;s largest commercial office space by square footage at its opening, it remains one of the hundred tallest buildings in the United States.
@@ -174,7 +195,7 @@
         </section><!-- closes projects -->
         <footer>
             <p>Text and images from         <a href="https://en.wikipedia.org/wiki/Walter_Gropius"
-            target="_blank">Wikepedia</a></strong></p>
+            target="_blank">Wikepedia</a></p>
         </footer>
     </div><!-- closes wrap -->
 </body>
